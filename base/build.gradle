@@ -1,21 +1,14 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-parcelize'
-    id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
-    id "androidx.navigation.safeargs"
 }
 
 android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.som3a.flowardtask"
         minSdk 21
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -39,13 +32,10 @@ android {
 }
 
 dependencies {
-    implementation project(":base")
     implementation project(":common")
-    implementation project(":domain")
-    implementation project(":data")
-    implementation project(":remote")
-    implementation project(":feature")
 
-    implementation "com.google.dagger:hilt-android:2.40.5"
-    kapt "com.google.dagger:hilt-android-compiler:2.40.5"
+    // RecyclerView
+    api "androidx.recyclerview:recyclerview:1.2.1"
+    // JetPack
+    api "androidx.fragment:fragment-ktx:1.4.0"
 }

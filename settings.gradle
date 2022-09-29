@@ -14,3 +14,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "FlowardTask"
 include ':app'
+include ':base'
+include ':common'
+include ':data'
+include ':domain'
+include ':remote'
+include ':feature'
